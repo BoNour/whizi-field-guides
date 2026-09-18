@@ -1,0 +1,14 @@
+site_name: Whizi Field Guides
+site_url: https://whizi-field-guides.readthedocs.io/
+site_description: Short, practical guides on using multiple AI models well, by Nour, founder of Whizi.
+site_author: Nour
+repo_url: https://github.com/BoNour/whizi-field-guides
+nav:
+  - Home: index.md
+  - Using multiple AI models together: multiple-ai-models.md
+  - What your AI subscriptions really cost: ai-subscription-costs.md
+theme:
+  name: readthedocs
+markdown_extensions:
+  - tables
+  - toc
