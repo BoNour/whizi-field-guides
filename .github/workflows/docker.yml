@@ -19,9 +19,3 @@ jobs:
           context: .
           push: true
           tags: bonour/whizi-field-guides:latest
-      - uses: peter-evans/dockerhub-description@v4
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: bonour/whizi-field-guides
-          readme-filepath: ./DOCKERHUB.md

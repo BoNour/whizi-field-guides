@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "whizi-field-guides"
+version = "0.1.0"
+description = "Offline copies of the Whizi field guides on using several AI models together and what AI subscriptions really cost."
+readme = "PYPI.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{ name = "Nour" }]
+keywords = ["ai", "chatgpt", "claude", "gemini", "guides"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Documentation",
+]
+
+[project.urls]
+Homepage = "https://whizi.io/"
+Documentation = "https://whizi-field-guides.readthedocs.io/"
+"Multiple AI models guide" = "https://whizi.io/resources/how-to-use-multiple-ai-models-together/"
+"AI subscription costs guide" = "https://whizi.io/resources/ai-subscription-costs/"
+Source = "https://github.com/BoNour/whizi-field-guides"
+
+[project.scripts]
+whizi-field-guides = "whizi_field_guides:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/whizi_field_guides"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"docs/multiple-ai-models.md" = "whizi_field_guides/guides/multiple-ai-models.md"
+"docs/ai-subscription-costs.md" = "whizi_field_guides/guides/ai-subscription-costs.md"
